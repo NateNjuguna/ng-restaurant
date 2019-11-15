@@ -1,0 +1,43 @@
+button,
+select,
+html,
+textarea,
+input {
+  font-family: Raleway, "Helvetica Neue", sans-serif;
+}
+
+md-bottom-sheet .md-subheader {
+  font-family: Raleway, "Helvetica Neue", sans-serif;
+}
+
+.nr-chips-messages {
+  color: #d50000;
+  position: relative;
+  order: 4;
+  overflow: hidden;
+}
+.nr-chips-messages ng-message, .nr-chips-messages [ng-message] {
+  font-size: 12px;
+  line-height: 14px;
+  overflow: hidden;
+  margin-top: 0;
+  opacity: 1;
+  padding-top: 5px;
+  -webkit-transition: all .3s cubic-bezier(.55,0,.55,.2);
+          transition: all .3s cubic-bezier(.55,0,.55,.2);
+}
+
+.md-chips {
+  display: block;
+  font-family: Raleway, "Helvetica Neue", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
