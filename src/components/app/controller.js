@@ -15,7 +15,7 @@ class Controller {
   }
 
   $onInit() {
-    this.toggleLeft = this._buildDelayedToggler('right');
+    this.toggleRight = this._buildDelayedToggler('right');
   }
 
   $postLink() {
@@ -66,12 +66,16 @@ class Controller {
     return angular.isObject(link);
   }
 
-  onLoadStateChanged(status) {
-    this.isLoading = status;
+  toggleLoader(status) {
+    if (angular.isDefined(status)) {
+      this.isLoading = status;
+    } else {
+      this.isLoading = !this.isLoading;
+    }
   }
 
   updateTitle(title) {
-    this._scope.$root.title = `Lean Meals | ${title}`;
+    this._scope.$root.title = `NG Restaurant | ${title}`;
     this.lmTitle = title;
   }
 

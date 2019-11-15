@@ -3,6 +3,7 @@ import angular from 'angular';
 class Controller {
 
   _deregisterFunctions = [];
+  plate = [];
   
   constructor($log, $q, $scope) {
     this._logger = $log;
@@ -10,14 +11,8 @@ class Controller {
     this._scope = $scope;
   }
 
-  $onDestroy() {
-    angular.forEach(this._deregisterFunctions, (deregisterFunction, index) => {
-      deregisterFunction();
-    });
-  }
-
-  $onInit() {
-    this.$app.updateTitle('Menu');
+  closeSidenav() {
+    this.$app.closeSidenav();
   }
 
 }

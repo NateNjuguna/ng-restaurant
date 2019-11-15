@@ -21,12 +21,12 @@ class Service {
 
   start() {
     this._rootScope.$emit('authenticating');
-    this._session.getObjectAsync('user').then(() => {
-        this._rootScope.$emit('authenticated');
-    }).catch((err) => {
-        this._logger.debug(err);
-        this._session.setObject('user', this._encode(user));
-        this._rootScope.$emit('authenticated');
+    this._session.getObjectAsync('user').catch((err) => {
+      this._logger.debug(err);
+      this._session.setObject('user', this._encode(user));
+        
+    }).finally(() => {
+      this._rootScope.$emit('authenticated');
     });
   }
 

@@ -3,9 +3,9 @@ import ngMaterial from 'angular-material';
 import controller from './controller';
 import template from './template.html';
 
-const moduleName = 'ng-restaurant.components.menu';
+const moduleName = 'ng-restaurant.components.plate';
 
-angular.module(moduleName, [ ngMaterial ]).component('nrMenu', {
+angular.module(moduleName, [ ngMaterial ]).component('nrPlate', {
   controller,
   require: {
     $app: '^nrApp',

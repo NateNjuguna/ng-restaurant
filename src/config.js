@@ -14,13 +14,13 @@ const config = ($locationProvider, $logProvider, $mdThemingProvider, $stateProvi
       .state('app', {
         abstract: true,
         component: 'nrApp',
-        url: '/app',
+        url: '/menu',
       })
-      .state('app.dashboard', {
-        url: '/dashboard/',
+      .state('app.menu', {
+        url: '/',
         views: {
           app: {
-            component: 'nrDashboard'
+            component: 'nrMenu'
           }
         }
       })
